@@ -1,0 +1,182 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+:root{
+    /* background colors */
+    --bg-primary-color:#040404;
+    --fill-color:#c3bbbb;
+    --bg-food-color:#c71873;
+
+    /* text colors */
+    --text-primary-color: #f0f0f0;
+
+    /* Spacing Variables */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md:16px;
+    --space-lg:24px;
+    --space-xl:32px;
+    --space-2xl:40px;
+    --space-3xl:48px;
+
+    /* Border Colors */
+    --border-primary-color: #333333;
+
+    /* Border Radius */
+    --border-radius-xs: 4px;
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 20px;
+    --border-radius-2xl: 24px;
+}
+
+.btn{
+    padding: var(--space-sm) var(--space-md);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.btn:hover{
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+}
+
+html{
+    background-color: var(--bg-primary-color);
+    color: var(--text-primary-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+main,section{
+    width: 100%;
+    height: 100%;
+
+}
+
+section{
+    padding: var(--space-2xl);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+    gap: var(--space-lg);
+}
+
+section .infos{
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.info{
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--border-primary-color);
+    border-radius: var(--border-radius-sm);
+}
+
+.board{
+    border: 1px solid var(--border-primary-color);
+   -webkit-box-flex: 1;
+       -ms-flex-positive: 1;
+           flex-grow: 1;
+   display: -ms-grid;
+   display: grid;
+   grid-template-columns: repeat(auto-fill,minmax(50px,1fr));
+   grid-template-rows: repeat(auto-fill,minmax(50px,1fr));
+    -ms-touch-action: none;
+        touch-action: none;       
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+}
+
+.block{
+    border: 1px solid var(--border-primary-color);
+}
+
+.snake{
+    background-color: var(--fill-color);
+}
+
+.food-color{
+    background-color: var(--bg-food-color);
+    border-radius: 50%;
+}
+
+.modal{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    background-color: #35353535;
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.modal .start-game, .modal .game-over{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: var(--space-lg) ;
+}
+
+.modal .game-over{
+    display: none;
+}.example {
+    display: -ms-grid;
+    display: grid;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
+}
